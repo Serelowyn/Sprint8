@@ -23,3 +23,8 @@ print(df_companies.dtypes)
 print(df_locations.dtypes)
 """con esto se comprueba que los datos de nombres pertencen a string, y los int y float corresponden a su naturaleza en ambos data frames. no se requiere limpieza adicional"""
 
+# identificar los 10 principales barrios en términos de finalización del recorrido
+
+"""se hace una agrupacion por la columna average_trips, poniendo los 10 mas altos que pide la instruccion"""
+top10_locations = df_locations.sort_values(by="average_trips", ascending=False).head(10)
+print(top10_locations)

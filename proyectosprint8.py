@@ -18,3 +18,8 @@ print(df_locations.head())
 """aqui se verifica el tipo de datos de cada una"""
 print(df_companies.info())
 print(df_locations.info())
+
+print(df_companies.dtypes)
+print(df_locations.dtypes)
+"""con esto se comprueba que los datos de nombres pertencen a string, y los int y float corresponden a su naturaleza en ambos data frames. no se requiere limpieza adicional"""
+

@@ -30,3 +30,14 @@ print(df_locations.dtypes)
 top10_locations = df_locations.sort_values(by="average_trips", ascending=False).head(10)
 print(top10_locations)
 
+# hacer gráficos: empresas de taxis y número de viajes, los 10 barrios principales por número de finalizaciones
+
+"""empresas de taxis y num de viajes"""
+plt.figure(figsize=(12,6))
+plt.bar(df_companies["company_name"], df_companies["trips_amount"], color="skyblue")
+plt.xticks(rotation=90, fontsize=8)
+plt.title("numero de viajes por empresa de taxis (15-16 de noviembre del 2017)")
+plt.xlabel("empresa")
+plt.ylabel("cantidad de viajes")
+plt.tight_layout()
+plt.show()

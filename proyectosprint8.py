@@ -14,3 +14,7 @@ df_locations = pd.read_csv(r"C:\\Users\\sasor\\Desktop\\Tripleten\\Sprint 8\\pro
 """esto nos permite revisar que se haya cargado correctamente"""
 print(df_companies.head())
 print(df_locations.head())
+
+"""aqui se verifica el tipo de datos de cada una"""
+print(df_companies.info())
+print(df_locations.info())

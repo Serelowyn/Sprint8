@@ -2,6 +2,7 @@
 
 """Se iran añadiendo conforme a se necesite en el futuro"""
 import pandas as pd
+import matplotlib.pyplot as plt
 
 # --------------- Fin de las importaciones
 
@@ -28,3 +29,4 @@ print(df_locations.dtypes)
 """se hace una agrupacion por la columna average_trips, poniendo los 10 mas altos que pide la instruccion"""
 top10_locations = df_locations.sort_values(by="average_trips", ascending=False).head(10)
 print(top10_locations)
+

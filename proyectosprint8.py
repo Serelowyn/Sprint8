@@ -95,10 +95,10 @@ print("promedio clima malo:", bad_weather.mean())
 #prueba t
 t_stat, p_value = stats.ttest_ind(good_weather, bad_weather, equal_var=False)
 
-print("Estadístico t:", t_stat)
+print("t stat:", t_stat)
 print("p-value:", p_value)
 
 if p_value < alpha:
-    print("Rechazamos H0: la duración promedio cambia en sábados lluviosos.")
+    print("se rechaza H0: la duracion promedio cambia en sabados lluviosos")
 else:
-    print("No se rechaza H0: no hay evidencia suficiente de diferencia.")
+    print("no se rechaza H0: no hay evidencia suficiente de la diferencia")

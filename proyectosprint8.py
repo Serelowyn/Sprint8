@@ -75,3 +75,10 @@ alpha = 0.02
 
 """se carga el data frame"""
 df_weather_trips = pd.read_csv(r"C:\\Users\\sasor\\Desktop\\Tripleten\\Sprint 8\\proyecto\\moved_project_sql_result_07.csv")
+
+"se revisan los datos. se identifica que algun dato esta incorrecot y se corrige a continuacion"
+print(df_weather_trips.dtypes)
+
+"""la fecha esta en el tipo de datos incorrecto, por lo que se corrige"""
+df_weather_trips["start_ts"] = pd.to_datetime(df_weather_trips["start_ts"])
+print(df_weather_trips.dtypes) #para verificar que el cambio se haya hecho

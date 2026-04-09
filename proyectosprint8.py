@@ -3,6 +3,7 @@
 """Se iran añadiendo conforme a se necesite en el futuro"""
 import pandas as pd
 import matplotlib.pyplot as plt
+from scipy import stats
 
 # --------------- Fin de las importaciones
 
@@ -90,3 +91,14 @@ bad_weather = df_weather_trips[df_weather_trips["weather_conditions"]=="Bad"]["d
 """se comprueba el promedio de cada categoria"""
 print("promedio clima bueno:", good_weather.mean())
 print("promedio clima malo:", bad_weather.mean())
+
+#prueba t
+t_stat, p_value = stats.ttest_ind(good_weather, bad_weather, equal_var=False)
+
+print("Estadístico t:", t_stat)
+print("p-value:", p_value)
+
+if p_value < alpha:
+    print("Rechazamos H0: la duración promedio cambia en sábados lluviosos.")
+else:
+    print("No se rechaza H0: no hay evidencia suficiente de diferencia.")

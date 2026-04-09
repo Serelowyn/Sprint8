@@ -60,3 +60,18 @@ plt.show()
 """ En el primer grafico (num de viajes por empresa y taxis), vemos que flash cab lidera en cantidad de viajes superando a cualquier otra por minimo, casi el doble de rendimiento. SIendo solo el top 5 que se le acerca, las demas son demasiado menores las cantidades en viajes. Muy problablemente esto se deba a que tenemos bastantes empresas y es normal ver la distribucion de viajes tan distinta, sin embargo que exista una de tal nivel quiere decir que hay mas contexto que nos hace falta, muy probablemente sea la empresa mas grande en general, que permita mas inversion en activo para seguir con las operaciones con mas frecuencia que la competencia."""
 
 """en el segundo grafico(top10 barrios por finalizacion de viajes) vemos que Loop y rivernorth estan casi a la par, siendo los mas populares y de ahi el top3 es streetville, siento este el top que opaca a las demas destinaciones, quizas sea el atractivo turistico y ademas el tamaño del lugar, ya que lugares con mas espacio, suele tener distintos puntos para aprovechar la visita de las personas como por ejemplo: recuerdos o souvenirs, comida, atracciones, etc."""
+
+# Paso 5. Prueba de hipótesis (Python)
+
+# - Hipótesis nula (H₀):La duración promedio de los viajes del Loop a O’Hare los sábados no cambia entre condiciones de clima bueno y malo.
+
+# Hipótesis alternativa (H₁): La duración promedio de los viajes del Loop a O’Hare los sábados sí cambia cuando el clima es malo (lluvia o tormenta).
+
+# Decide por tu cuenta dónde establecer el nivel de significación (alfa).
+"""se decide el 0.02 ya que el 2% es mas reducido el margen, y para probar los resultados si acepto solo 2% de probabilidad de rechazar la h nula"""
+
+alpha = 0.02
+
+
+"""se carga el data frame"""
+df_weather_trips = pd.read_csv(r"C:\\Users\\sasor\\Desktop\\Tripleten\\Sprint 8\\proyecto\\moved_project_sql_result_07.csv")

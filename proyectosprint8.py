@@ -82,3 +82,11 @@ print(df_weather_trips.dtypes)
 """la fecha esta en el tipo de datos incorrecto, por lo que se corrige"""
 df_weather_trips["start_ts"] = pd.to_datetime(df_weather_trips["start_ts"])
 print(df_weather_trips.dtypes) #para verificar que el cambio se haya hecho
+
+"""separo primero entre Good or Bad clima para iniciar y ver en un futuro si el clima afecta a la duracion del vuelo"""
+good_weather = df_weather_trips[df_weather_trips["weather_conditions"]=="Good"]["duration_seconds"]
+bad_weather = df_weather_trips[df_weather_trips["weather_conditions"]=="Bad"]["duration_seconds"]
+
+"""se comprueba el promedio de cada categoria"""
+print("promedio clima bueno:", good_weather.mean())
+print("promedio clima malo:", bad_weather.mean())

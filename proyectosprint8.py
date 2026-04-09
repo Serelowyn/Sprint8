@@ -36,7 +36,7 @@ print(top10_locations)
 plt.figure(figsize=(12,6))
 plt.bar(df_companies["company_name"], df_companies["trips_amount"], color="skyblue")
 plt.xticks(rotation=90, fontsize=8)
-plt.title("num de viajes por empresa de taxis (15 y 16 de noviembre del 2017)")
+plt.title("num de viajes por empresa de taxis")
 plt.xlabel("empresa")
 plt.ylabel("cantidad de viajes")
 plt.tight_layout()
@@ -48,8 +48,15 @@ top10_locations = df_locations.sort_values(by="average_trips", ascending=False).
 plt.figure(figsize=(10,6))
 plt.bar(top10_locations["dropoff_location_name"], top10_locations["average_trips"], color="orange")
 plt.xticks(rotation=45)
-plt.title("top10 barrios por finalizacion de viajes (noviembre 2017)")
+plt.title("top10 barrios por finalizacion de viajes")
 plt.xlabel("barrio")
 plt.ylabel("promedio de viajes")
 plt.tight_layout()
 plt.show()
+
+
+# sacar conclusiones basadas en cada gráfico y explicar los resultados
+
+""" En el primer grafico (num de viajes por empresa y taxis), vemos que flash cab lidera en cantidad de viajes superando a cualquier otra por minimo, casi el doble de rendimiento. SIendo solo el top 5 que se le acerca, las demas son demasiado menores las cantidades en viajes. Muy problablemente esto se deba a que tenemos bastantes empresas y es normal ver la distribucion de viajes tan distinta, sin embargo que exista una de tal nivel quiere decir que hay mas contexto que nos hace falta, muy probablemente sea la empresa mas grande en general, que permita mas inversion en activo para seguir con las operaciones con mas frecuencia que la competencia."""
+
+"""en el segundo grafico(top10 barrios por finalizacion de viajes) vemos que Loop y rivernorth estan casi a la par, siendo los mas populares y de ahi el top3 es streetville, siento este el top que opaca a las demas destinaciones, quizas sea el atractivo turistico y ademas el tamaño del lugar, ya que lugares con mas espacio, suele tener distintos puntos para aprovechar la visita de las personas como por ejemplo: recuerdos o souvenirs, comida, atracciones, etc."""
